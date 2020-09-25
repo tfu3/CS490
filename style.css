@@ -1,0 +1,255 @@
+html {
+    height: 100%;
+    overflow-y: hidden; /*no scroll bar single page */
+}
+
+body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+#container {
+    height: 100%;
+}
+
+
+#main {
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) ;
+    grid-template-rows: repeat(12, 1fr) 50px
+    
+
+    
+
+}
+#background-l{
+    grid-area: 1 / 1 / 13 / 5 ;
+    background-color:rgb(81, 112, 95);
+}
+#background-r{
+    grid-area: 1/ 5 /13/ 9;
+    background-color:white;
+    z-index: 1;
+}
+#h1{
+    grid-area: 4/2 /4 /4;
+}
+#p1 {
+    grid-area: 5/2 /5 /4 ;
+}
+#p2 {
+    grid-area: 6/2 /6 /4 ;
+}
+#p3 {
+    grid-area: 7/2 /7 /4 ;
+}
+
+.h-styling{
+    margin: 15px;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Krona One', sans-serif;
+    color: white;
+    align-self: center;
+    margin-left: 10px;
+
+}
+.p-styling{
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Krona One', sans-serif;
+    color: rgb(255, 255, 255); 
+    align-self: center;
+    margin-left: 50px;
+
+
+}   
+
+
+#p4{
+    grid-area: 6/ 6 / 6 /8;
+    
+
+}
+.p4-styling{
+    margin: 13px;
+    font-size: 20px;
+    font-weight: bold ;
+    font-family: 'Krona One', sans-serif;
+    color:rgb(81, 112, 95); 
+    margin-left: 30px;
+    z-index: 1;
+    
+}
+.signup{
+    grid-area: 8/6/8/8;
+    z-index: 1;
+    height: 40px;
+    align-self: center;
+    width: 100%;
+    border-style: none;
+    background-color: rgb(81, 112, 95);
+    font-family: 'Krona One', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(81, 112, 95);
+    border-radius: 25px ;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+
+}
+.login{
+    grid-area: 9/6/9/8;
+    z-index: 1;
+    height: 40px;
+    align-self: center;
+    width: 100%;
+    border-style: none;
+    background-color: white;
+    font-family: 'Krona One', sans-serif;
+    color: rgb(81, 112, 95);
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(81, 112, 95);
+    border-radius: 25px ;
+    cursor: pointer;
+}
+
+/* Put in Forgot password from the footer*/
+
+#inputtext1 {
+    grid-area: 1/6/1/6;
+    z-index: 2;
+    font-family: 'Krona One', sans-serif;
+    color: rgb(81, 112, 95) ;
+    background-color: rgb(240,240,240);
+    width: 92.5%;
+    
+    
+}
+
+#inputtext2 {
+    grid-area: 1/7/1/7;
+    z-index: 2;
+    font-family: 'Krona One', sans-serif;
+    color: rgb(81, 112, 95);
+    background-color: rgb(240,240,240);
+    width: 92.5%;
+    
+    
+}
+
+#username{
+    grid-area: 1/6/1/6;
+    z-index: 1;
+    height: 30px;
+    align-self: end;
+    width: 90%;
+    border-style: none;
+    border-bottom: 1px solid rgb(81, 112, 95);
+    background-color:rgb(240,240,240);
+    
+    
+}
+
+#password{
+    grid-area: 1/7/1/7;
+    z-index: 1;
+    height: 30px;
+    align-self: end;
+    width: 90%;
+    border-style: none;
+    border-bottom: 1px solid rgb(81, 112, 95);
+    background-color:rgb(240,240,240);
+    
+
+}
+/* NEED TO FIX USERNAME AND PASSWORD BOX Z VALUE */
+
+#small-login{
+    grid-area: 1/8/1/8;
+    z-index: 1;
+    height: 40px;
+    align-self: center;
+    width: 40%;
+    border-style: none;
+    background-color: white;
+    font-family: 'Krona One', sans-serif;
+    color: rgb(81, 112, 95);
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(81, 112, 95);
+    border-radius: 25px ;
+    cursor: pointer;
+}
+
+/*modal sections*/
+.bg-modal{
+
+    z-index: 2;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; (If none, no popup */
+    
+   
+   
+    
+}
+
+.modal-cont{
+    z-index: 4;
+    width: 450px;
+    height: 300px;
+    background-color:rgb(184, 204, 184);
+    opacity: 1;
+    border-radius: 4px;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+
+}
+.login2{
+    
+    height: 40px;
+    align-self: center;
+    width: 60%;
+    border-style: 2px solid white;
+    background-color: white;
+    font-family: 'Krona One', sans-serif;
+    margin-top: 10px;
+    color: rgb(81, 112, 95);
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(81, 112, 95);
+    border-radius: 25px ;
+    cursor: pointer;
+    
+}
+
+input {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    padding: 8px;
+    border: 1px solid gray;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: x-large;
+    font-weight: bold;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
